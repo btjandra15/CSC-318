@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link rel="stylesheet" href="/CSC 318/HW3/calculator.css">
+        <title>CSC 318 - Calculator Layout</title>
+    </head>
+
+    <body>
+        <a href="/CSC 318/HW3/HW3.html">Back</a>
+
+        <div class="container">
+            <div id="targetElement" class="output m-2 border rounded border-gray-500" style="position: relative; left: -50px;">
+                <p id="outputNumber">0</p>
+            </div>
+
+            <div class="inputs">
+                <div class="row align-items-center justify-content-center" style="padding: 10px;">
+                    <div class="col-sm-1">
+                        <button class="btn btn-block btn-default btn-fixed-shape" style="background-color: lightgray;">Deg</button>
+                    </div>
+
+                    <div class="col-sm-1">
+                        <button class="btn btn-block btn-default btn-fixed-shape" style="background-color: lightgray;">x!</button>
+                    </div>
+
+                    <div class="col-sm-1">
+                        <button class="btn btn-block btn-default btn-fixed-shape" style="background-color: lightgray;">(</button>
+                    </div>
+
+                    <div class="col-sm-1">
+                        <button class="btn btn-block btn-default btn-fixed-shape" style="background-color: lightgray;">)</button>
+                    </div>
+
+                    <div class="col-sm-1">
+                        <button class="btn btn-block btn-default btn-fixed-shape" style="background-color: lightgray;">%</button>
+                    </div>
+
+                    <div class="col-sm-1">
+                        <button id="clearButton"" onclick="clearCalculator()" class="btn btn-block btn-default btn-fixed-shape" style="background-color: lightgray;">AC</button>
+                    </div>
+                </div>
+
+                <div class="row align-items-center justify-content-center" style="padding: 10px;">
+                    <div class="col-sm-1">
+                        <button class="btn btn-block btn-default btn-fixed-shape" style="background-color: lightgray;">sin</button>
+                    </div>
+
+                    <div class="col-sm-1">
+                        <button class="btn btn-block btn-default btn-fixed-shape" style="background-color: lightgray;">ln</button>
+                    </div>
+
+                    <div class="col-sm-1">
+                        <button onclick="getCalculatorNumber(7)" class="btn btn-block btn-default btn-fixed-shape" style="background-color: rgb(245, 245, 245);">7</button>
+                    </div>
+
+                    <div class="col-sm-1">
+                        <button onclick="getCalculatorNumber(8)" class="btn btn-block btn-default btn-fixed-shape" style="background-color: rgb(245, 245, 245);">8</button>
+                    </div>
+
+                    <div class="col-sm-1">
+                        <button onclick="getCalculatorNumber(9)" class="btn btn-block btn-default btn-fixed-shape" style="background-color: rgb(245, 245, 245);">9</button>
+                    </div>
+
+                    <div class="col-sm-1">
+                        <button onclick="divideNumber()" class="btn btn-block btn-default btn-fixed-shape" style="background-color: lightgray;">&#247;</button>
+                    </div>
+                </div>
+
+                <div class="row align-items-center justify-content-center" style="padding: 10px;">
+                    <div class="col-sm-1">
+                        <button class="btn btn-block btn-default btn-fixed-shape" style="background-color: lightgray;">cos</button>
+                    </div>
+
+                    <div class="col-sm-1">
+                        <button onclick="logNumber()" class="btn btn-block btn-default btn-fixed-shape" style="background-color: lightgray;">log</button>
+                    </div>
+
+                    <div class="col-sm-1">
+                        <button onclick="getCalculatorNumber(4)" class="btn btn-block btn-default btn-fixed-shape" style="background-color: rgb(245, 245, 245);">4</button>
+                    </div>
+
+                    <div class="col-sm-1">
+                        <button onclick="getCalculatorNumber(5)" class="btn btn-block btn-default btn-fixed-shape" style="background-color: rgb(245, 245, 245);">5</button>
+                    </div>
+
+                    <div class="col-sm-1">
+                        <button onclick="getCalculatorNumber(6)" class="btn btn-block btn-default btn-fixed-shape" style="background-color: rgb(245, 245, 245);">6</button>
+                    </div>
+
+                    <div class="col-sm-1">
+                        <button onclick="multiplyNumber()" class="btn btn-block btn-default btn-fixed-shape" style="background-color: lightgray;">&#215;</button>
+                    </div>
+                </div>
+
+                <div class="row align-items-center justify-content-center" style="padding: 10px;">
+                    <div class="col-sm-1">
+                        <button class="btn btn-block btn-default btn-fixed-shape" style="background-color: lightgray;">tan</button>
+                    </div>
+
+                    <div class="col-sm-1">
+                        <button class="btn btn-block btn-default btn-fixed-shape" style="background-color: lightgray;">&radic;</button>
+                    </div>
+
+                    <div class="col-sm-1">
+                        <button onclick="getCalculatorNumber(1)" class="btn btn-block btn-default btn-fixed-shape" style="background-color: rgb(245, 245, 245);">1</button>
+                    </div>
+
+                    <div class="col-sm-1">
+                        <button onclick="getCalculatorNumber(2)" class="btn btn-block btn-default btn-fixed-shape" style="background-color: rgb(245, 245, 245);">2</button>
+                    </div>
+
+                    <div class="col-sm-1">
+                        <button onclick="getCalculatorNumber(3)" class="btn btn-block btn-default btn-fixed-shape" style="background-color: rgb(245, 245, 245);">3</button>
+                    </div>
+
+                    <div class="col-sm-1">
+                        <button onclick="subtractNumber()" class="btn btn-block btn-default btn-fixed-shape" style="background-color: lightgray;">-</button>
+                    </div>
+                </div>
+
+                <div class="row align-items-center justify-content-center" style="padding: 10px;">
+                    <div class="col-sm-1">
+                        <button class="btn btn-block btn-default btn-fixed-shape" style="background-color: lightgray;">EXP</button>
+                    </div>
+
+                    <div class="col-sm-1">
+                        <button onclick="exponentNumber()" class="btn btn-block btn-default btn-fixed-shape" style="background-color: lightgray;">x <sup>y</sup></button>
+                    </div>
+
+                    <div class="col-sm-1">
+                        <button class="btn btn-block btn-default btn-fixed-shape" style="background-color: rgb(245, 245, 245);">0</button>
+                    </div>
+
+                    <div class="col-sm-1">
+                        <button id="decimalButton" onclick="decimalClicked()" class="btn btn-block btn-default btn-fixed-shape" style="background-color: rgb(245, 245, 245);">.</button>
+                    </div>
+
+                    <div class="col-sm-1">
+                        <button onclick="takeTotal()" class="btn btn-block btn-default btn-fixed-shape" style="background-color: blue; color: white;">=</button>
+                    </div>
+
+                    <div class="col-sm-1">
+                        <button onclick="addNumber()" class="btn btn-block btn-default btn-fixed-shape" style="background-color: lightgray;">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="/CSC 318/HW3/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    </body>
+</html>

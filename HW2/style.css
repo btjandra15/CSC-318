@@ -1,0 +1,100 @@
+body{
+    background-color: black;
+    color: white;
+}
+
+/* Luxembourg Flag*/
+.red-threevert{
+    background-color: red;
+    width: 700px;
+    height: 100px;
+}
+
+#white{
+    background-color: white;
+}
+
+.light-blue-threevert{
+    background-color: blue;
+    width: 700px;
+    height: 100px;
+}
+
+/* Thailand Flag*/
+.thailand-red{
+    background-color: red;
+    width: 300px;
+    height: 25px;
+}
+
+.thailand-white{
+    background-color: white;
+    width: 300px;
+    height: 25px;
+}
+
+.thailand-blue{
+    background-color: blue;
+    width: 300px;
+    height: 50px;
+}
+
+/* Romania Flag*/
+.romania-blue{
+    background-color: blue;
+    width: 150px;
+    height: 300px;
+    display: inline-block;
+    position: relative;
+    left: 4px;
+}
+
+.romania-yellow{
+    background-color: yellow;
+    width: 150px;
+    height: 300px;
+    display: inline-block;
+}
+
+.romania-red{
+    background-color: red;
+    width: 150px;
+    height: 300px;
+    display: inline-block;
+    position: relative;
+    right: 4px;
+}
+
+/*Mexico Flag*/
+.mexico-green{
+    background-color: green;
+    width: 150px;
+    height: 300px;
+    display: inline-block;
+}
+
+.mexico-white{
+    background-color: white;
+    width: 150px;
+    height: 300px;
+    display: inline-block;
+    position: relative;
+    top: -170px;
+    left: -5px;
+}
+
+.mexico-red{
+    background-color: red;
+    width: 150px;
+    height: 300px;
+    display: inline-block;
+    position: relative;
+    left: -10px;
+}
+
+.mexico-logo{
+    max-height: 130px;
+    align-self: auto;
+    position: relative;
+    top: 70px;
+}

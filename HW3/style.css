@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    display: grid;
+    grid-template: 50px 1fr 1fr 100px / repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+}
+
+.container div{
+    padding: 10px;
+}
+
+.header{
+    background-color: gray;
+    grid-column: 1 / span 4;
+}
+
+.sidebar{
+    background-color: darkcyan;
+    grid-row: 2 / span 2;
+}
+
+.nav{
+    background-color: blue;
+    grid-column: 2 / span 4;
+}
+
+.article{
+    background-color: purple;
+    grid-column: 2 / span 4;
+}
+
+.footer{
+    background-color: darkblue;
+    grid-column: 1 / span 4;
+}
